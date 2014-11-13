@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/info_title"
+        android:focusable="true" />
+
+    <Button
+        android:id="@+id/plugBtn"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:background="@drawable/login_btn"
+        android:textColor="@android:color/white"
+        android:textSize="40px"
+        android:text="运  行" />
+
+    <TextView
+        android:id="@+id/sourceurl"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/appinfo"
+        android:text="sourceurl" />
+
+    <com.xianv.apkshow.view.ExpandableTextView
+        android:id="@+id/appinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/include1"
+        android:text="appinfo" >
+    </com.xianv.apkshow.view.ExpandableTextView>
+
+</RelativeLayout>

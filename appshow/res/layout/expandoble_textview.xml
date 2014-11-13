@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="title" />
+
+    <FrameLayout
+        android:id="@+id/fl_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="5dp" >
+
+        <TextView
+            android:id="@+id/tv_desc_short"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_desc_long"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bt_more"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/fl_desc"
+        android:layout_marginRight="10dp"
+        android:background="#1c000000"
+        android:gravity="center"
+        android:text="更多"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_more_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/bt_more"
+        android:layout_below="@id/fl_desc"
+        android:layout_toLeftOf="@id/bt_more"
+        android:background="@drawable/more_line"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone" />
+
+</RelativeLayout>
